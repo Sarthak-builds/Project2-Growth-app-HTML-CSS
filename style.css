@@ -1,0 +1,82 @@
+/* Basic CSS properties */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+ul {
+   list-style: none;
+}
+img {
+    max-width:100%;
+}
+body {
+    font-family:'poppins',serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+/* navbar properties */
+.navBar {
+    margin: 8px;
+    padding: 8px;
+    text-align: center;
+    background-color: rgb(222, 222, 222);
+    border-radius: 1.2rem;
+}
+.container {
+    max-width: 100%;
+    margin: 4px;
+    padding: 8px;
+}
+.container-sm {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+ul li a {
+    margin:4px;
+    padding: 12px;
+}
+ul li a:hover{
+    color: #4891ff;
+    transition: 0.5s;
+}
+ul li a i:hover{
+    color: #4891ff;
+    transition: 0.5s;
+}
+.navBar ul li a i {
+    margin-right: 10px;
+} 
+.navBar ul li:last-child a {
+    margin-right: 10px;
+
+}
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 1.2rem;
+    box-shadow:2px 1px 1px rgb(0, 0, 0) ;
+    background-color: rgb(206, 204, 202);
+    transition: 0.5s;
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.btn-light {
+    background-color: #4891ff;
+    color: white;
+}
+.btn-dark {
+    background-color: black;
+    color: white;
+}
