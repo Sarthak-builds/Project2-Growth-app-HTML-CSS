@@ -3,13 +3,15 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    color: black;
 }
 a {
     text-decoration: none;
 }
-ul {
-   list-style: none;
+ul li {
+    list-style-type:none;
+}
+ul li a {
+    color: black;
 }
 img {
     max-width:100%;
@@ -25,6 +27,7 @@ body {
     padding: 8px;
     text-align: center;
     background-color: rgb(222, 222, 222);
+    color: black;
     border-radius: 1.2rem;
 }
 .container {
@@ -32,11 +35,32 @@ body {
     margin: 4px;
     padding: 8px;
 }
+.side-menu 
+{
+    display: flex;
+    flex-direction:column;
+    justify-content: top;
+    align-items: center;
+    width: 220px;
+    height: 100%;
+    background-color: rgb(222, 222, 222);
+    position: absolute;
+    top: 10px;
+    right: 9px;
+    border-radius: 1.1rem;
+    padding-top: 50px;
+    box-shadow: 0px 1px 0.5px 1px;
+}
+.list-sidemenu{
+    font-size: 22px;
+    line-height: 60px;
+}
 .container-sm {
     display: flex;
     justify-content:space-between;
     align-items: center;
 }
+
 .list {
     display: flex;
     justify-content: flex-end;
@@ -63,9 +87,11 @@ ul li a i:hover{
 }
 .btn {
     display: inline-block;
-    padding: 13px 20px;
-    border-radius: 1.2rem;
-    box-shadow:2px 1px 1px rgb(0, 0, 0) ;
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 1.1rem;
+    border-color: white;
+    box-shadow:0.5px 0.5px 0.5px rgb(154, 153, 153) ;
     background-color: rgb(206, 204, 202);
     transition: 0.5s;
 }
@@ -75,8 +101,156 @@ ul li a i:hover{
 .btn-light {
     background-color: #4891ff;
     color: white;
+    border-color: rgb(208, 203, 203);
 }
 .btn-dark {
     background-color: black;
     color: white;
+}
+.hamburger-icon {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    right: 12px;
+    top: 25px;
+    border-radius: 0.5em;
+    border: none;
+    background: none;
+    z-index: 1000;
+}
+.hamburger {
+    width: 25px;
+    height: 5px;
+    border-radius: 0.2rem;
+    background-color:black;
+    margin: 5px;}
+.hero-container {
+    width:70%;
+    margin:auto;
+    height: 550px;
+    border: 0.1px solid rgb(238, 238, 238);
+    border-radius: 1.1rem;
+    padding: 5px;
+    background: url("images/hero-bg.png") no-repeat;
+    background-size:contain;
+    background-position: right bottom;
+}
+.hero-content{
+    margin:left;
+    padding: 4px;
+    width: 70%;
+    line-height: 50px;
+    border-radius: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: left;
+}
+.hero-button {
+    margin: 4px;
+}
+.container-video {
+    width: 70%;
+    margin: auto;
+    height: auto;
+    padding: 18px;
+    line-height:40px;
+    text-align: center;
+    background-color: black;
+    border-top-left-radius: 1.1rem;
+    border-top-right-radius: 1.1rem;
+}
+.video-content{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+.container3{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    background-color: black;
+}
+.content3{
+    margin: auto;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.card{
+    background: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+
+}
+.card p:nth-child(2){
+    margin-top: 30px;
+    font-weight: bold;
+}
+.contain-pricing {
+    width: 30%;
+    margin: auto;
+    height: auto;
+}
+.pricing-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 20px;
+}
+.contain-pricing{
+    background-color: rgb(237, 237, 237);
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    padding: 14px;
+    line-height: 40px;
+}
+.card1{
+    border-radius: 1.1rem;
+    border:0.1px dotted grey;
+    box-shadow: -18px -18px 1px rgba(0,0,0,0.2);
+    width: 600px;
+    height: auto;
+    line-height: 50px;
+    padding: 28px;
+    margin: 14px;
+    font-size: 18px;
+}
+.card2{
+    color: white;
+    background-color: black;
+    border-radius: 1.1rem;
+    border: 0.1px dotted grey;
+    box-shadow: -18px -18px 1px rgba(47, 139, 245, 0.9);
+    width: 600px;
+    height: auto;
+    line-height: 50px;
+    padding: 28px;
+    margin: 24px;
+    font-size: 18px;
+}
+@media (max-width:600px){
+    .list {
+        display: none;
+    }
+}
+@media (min-width:600px){
+    .hamburger{
+        display: none;
+    }
+    .side-menu {
+        display: none;
+    }
 }
